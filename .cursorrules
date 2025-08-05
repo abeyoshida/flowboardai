@@ -1,0 +1,40 @@
+# Cursor Rules for FlowBoard AI
+
+## Project Setup
+- This is a Next.js 15 project using React 19
+- Use TypeScript for all code
+- Project uses /src folder structure - use existing folders in /src, don&apos;t recreate them outside
+- Use absolute imports with &apos;@&apos; prefix instead of relative paths
+
+## UI Framework & Styling
+- **ALWAYS use Shadcn UI for ALL UI elements** - no custom components unless absolutely necessary
+- Use Tailwind CSS for styling
+- If Shadcn is not initialized, run: `npx shadcn@latest init --yes`
+- To add Shadcn components, use: `npx shadcn@latest add [component-name]`
+- Example: `npx shadcn@latest add button` for button component
+
+## Next.js Best Practices
+- Use Next.js Server Components whenever possible
+- Use Next.js Server Actions whenever possible
+- Leverage built-in Next.js optimizations (Image, Link, etc.)
+
+## Database & Validation
+- Use database schema from @/lib/db/schema.ts as SINGLE SOURCE OF TRUTH
+- **NEVER modify or remove anything from database schema unless explicitly requested**
+- Generate validation schemas, forms, and actions based on existing database schema
+
+## Code Quality
+- Use HTML entities: &apos; for single quotes to fix unescaped entity warnings
+- Be accurate and thorough in implementations
+- Provide immediate, actionable solutions
+- Focus on practical code over explanations unless specifically requested
+
+## File Organization
+- Follow existing /src folder structure
+- Use absolute imports (@/...) for all internal imports
+- Keep components modular and reusable
+
+## Development Workflow
+- Install missing Shadcn components as needed during development
+- Prioritize Server Components and Server Actions
+- Maintain consistency with existing project patterns 
