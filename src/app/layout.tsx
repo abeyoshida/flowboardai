@@ -1,14 +1,8 @@
 import type { Metadata } from "next";
-import {
-  ClerkProvider,
-  SignInButton,
-  SignUpButton,
-  SignedIn,
-  SignedOut,
-  UserButton,
-} from '@clerk/nextjs'
+import { ClerkProvider } from '@clerk/nextjs'
 import { dark } from "@clerk/themes";
 import { Poppins } from "next/font/google";
+import { Header } from "@/components/header";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -35,29 +29,7 @@ export default function RootLayout({
     >
       <html lang="en" className="dark">
         <body className={`${poppins.variable} antialiased`}>
-          <header className="flex justify-end items-center p-4 gap-4 h-16">
-            <SignedOut>
-              <SignInButton mode="modal">
-                <button className="bg-primary text-primary-foreground hover:bg-primary/90 px-4 py-2 rounded-md text-sm font-medium transition-colors cursor-pointer">
-                  Sign In
-                </button>
-              </SignInButton>
-              <SignUpButton mode="modal">
-                <button className="bg-secondary text-secondary-foreground hover:bg-secondary/80 px-4 py-2 rounded-md text-sm font-medium transition-colors cursor-pointer">
-                  Sign Up
-                </button>
-              </SignUpButton>
-            </SignedOut>
-            <SignedIn>
-              <UserButton 
-                appearance={{
-                  elements: {
-                    avatarBox: "w-8 h-8"
-                  }
-                }}
-              />
-            </SignedIn>
-          </header>
+          <Header />
           {children}
         </body>
       </html>
