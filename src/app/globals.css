@@ -119,4 +119,12 @@
   body {
     @apply bg-background text-foreground;
   }
+  button, 
+  [role="button"], 
+  a, 
+  [data-slot="button"],
+  [data-slot="dialog-trigger"],
+  [data-slot="alert-dialog-trigger"] {
+    @apply cursor-pointer;
+  }
 }
