@@ -140,6 +140,22 @@ export default function Home() {
          </div>
        </section>
 
+       {/* CTA Section */}
+      <section className="py-20 bg-gray-600">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">Ready to get started?</h2>
+          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+            Start using FlowBoardAI to streamline your workflows and boost productivity.
+          </p>
+          <SignUpButton mode="modal">
+            <Button size="lg" variant="secondary" className="text-blue-600">
+              Create your free account
+            </Button>
+          </SignUpButton>
+        </div>
+        
+      </section>
+
         {/* Footer */}
         <footer className="bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
          <div className="max-w-7xl mx-auto">
